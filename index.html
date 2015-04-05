@@ -1,0 +1,108 @@
+<!doctype html>
+<head>
+<title>Mr. Smiles</title>
+<script src='http://127.0.0.1:9001/js/socket.js'></script>
+<style>
+body {
+    margin: 0;
+    background-color: hsl(188, 100%, 90%);
+}
+
+.face {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+    position: absolute;
+    top: 100px;
+    left: 400px;
+
+    background-color: hsl(188, 100%, 80%);
+    transition: 0.9s all;
+}
+
+.face:hover {
+    background-color: hsl(188, 100%, 50%);
+}
+
+.face:active {
+    margin-top: -10px;
+    background-color: hsl(188, 100%, 75%);
+}
+
+.eye {
+    border-radius: 290px;
+    pointer-events: none;
+
+    position: absolute;
+    top: -25px;
+
+}
+
+.face:hover .eye {
+    top: 70px;
+    width: 30px;
+    height: 35px;
+    background-color: hsl(188, 100%, 40%);
+}
+
+.eye-left {
+    width: 0px;
+    height: 0px;
+    left: 47px;
+}
+
+.eye-right {
+    width: 255px;
+    height: 255px;
+    right: -50px;
+}
+
+.face:hover .eye-left {
+    transition: 0.43s all;
+}
+
+.face:hover .eye-right {
+    right: 47px;
+    transition: 0.4s all;
+}
+
+.face:active .eye {
+    top: 65px;
+}
+
+.mouth {
+    width: 100px;
+    height: 0px;
+    border-radius: 0 0 100px 100px;
+
+    position: relative;
+    top: 135px;
+    left: 50px;
+
+    transform: rotate(-30deg);
+}
+
+.face:hover .mouth {
+    height: 46px;
+    background-color: hsl(188, 100%, 40%);
+    transform: rotate(0);
+    transition: 0.7s all;
+}
+
+.face:active .mouth {
+    transition: 0.3s all;
+    height: 39px;
+}
+</style>
+</head>
+<body>
+
+<div class="face">
+    <div class="mouth"></div>
+    <div class="eye eye-left"></div>
+    <div class="eye eye-right"></div>
+</div>
+
+</body>
+</html>
